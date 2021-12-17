@@ -1,0 +1,5 @@
+test_vip:
+  test_vip_001:
+    element: "点击此链接"
+  test_vip_002:
+    element: "点击此链接6"

@@ -1,0 +1,37 @@
+test_address:
+  test_address_001:
+    receipt_name: "小王"
+    phone: "17858936388"
+    detail_addr_info: "汤臣一品108号"
+    post_code: "314051"
+    toast: Null
+  test_address_002:
+    receipt_name: ""
+    phone: "17858936388"
+    detail_addr_info: "汤臣一品108号"
+    post_code: "314051"
+    toast: "收件人姓名"
+  test_address_003:
+    receipt_name: "小王"
+    phone: "178589"
+    detail_addr_info: "汤臣一品108号"
+    post_code: "314051"
+    toast: "11位手机号"
+  test_address_004:
+    receipt_name: "小王"
+    phone: "17858936388"
+    detail_addr_info: ""
+    post_code: "314051"
+    toast: "详细地址"
+  test_address_005:
+    receipt_name: "小王"
+    phone: "17858936388"
+    detail_addr_info: "汤臣一品108号"
+    post_code: "123"
+    toast: "邮政编码"
+  test_address_006:
+    receipt_name: "小王"
+    phone: "17858936388"
+    detail_addr_info: "汤臣一品108号"
+    post_code: ""
+    toast: Null
