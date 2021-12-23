@@ -1,12 +1,17 @@
 from page.page_about_yunmall import Page_about_yunmall
 from page.page_address_manage import PageAddressManage
+from page.page_category import PageCategory
 from page.page_edit_address import PageEditAddress
+from page.page_goods_detail import PageGoodsDetail
+from page.page_goods_list import PageGoodsList
 from page.page_help import PageHelp
 from page.page_home import PageHome
 from page.page_login import PageLogin
 from page.page_me import PageMe
 from page.page_register import PageRegister
+from page.page_search import PageSearch
 from page.page_setting import PageSetting
+from page.page_shop_cart import PageShopCart
 from page.page_vip import PageVip
 
 
@@ -54,3 +59,25 @@ class Page:
     @property
     def page_edit_address(self):
         return PageEditAddress(self.driver)
+
+    @property
+    def page_category(self):
+        return PageCategory(self.driver)
+
+    @property
+    def page_goods_list(self):
+        return PageGoodsList(self.driver)
+
+    @property
+    def page_goods_detail(self):
+        return PageGoodsDetail(self.driver)
+
+    @property
+    def page_shop_cart(self):
+        return PageShopCart(self.driver)
+
+
+
+    @property
+    def page_search(self):
+        return PageSearch(self.driver)

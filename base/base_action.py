@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import time
@@ -29,6 +30,7 @@ class BaseAction:
         return self.base_find_element(loc).text
 
     # 判断toast是否存在
+    @allure.step(title="判断toast是否存在")
     def base_is_toast_exist(self, msg):
         msg_xpath = By.XPATH, "//*[contains(@text,'%s')]" % msg
         try:
@@ -46,6 +48,7 @@ class BaseAction:
             return False
 
     # 获取toast的值
+    @allure.step(title="获取toast的值")
     def base_get_toast_text(self, msg):
         """
         :param msg: 要查找的toast的部分内容

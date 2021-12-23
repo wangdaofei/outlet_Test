@@ -12,6 +12,7 @@ class TestVip:
         self.page = Page(self.driver)
 
     def teardown(self):
+        time.sleep(2)
         GetDriver.quit_driver()
 
     @pytest.mark.parametrize("args", analyze_file("data_vip.yaml", "test_vip"))
@@ -38,4 +39,3 @@ class TestVip:
         self.driver.switch_to.context("NATIVE_APP")
         # 点击关闭键
         self.page.page_vip.page_vip_close_btn_click()
-        time.sleep(5)

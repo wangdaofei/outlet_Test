@@ -13,6 +13,7 @@ class TestLogin:
         self.page = Page(self.driver)
 
     def teardown(self):
+        time.sleep(2)
         GetDriver.quit_driver()
 
     @pytest.mark.parametrize("args", analyze_file("data_login.yaml", "test_login"))

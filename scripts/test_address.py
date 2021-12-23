@@ -12,6 +12,7 @@ class TestAddress:
         self.page = Page(self.driver)
 
     def teardown(self):
+        time.sleep(2)
         GetDriver.quit_driver()
 
     @pytest.mark.parametrize("args", analyze_file("data_test_address.yaml", "test_address"))
@@ -76,7 +77,7 @@ class TestAddress:
         # 断言是否保存成功
         assert self.page.page_edit_address.page_edit_address_is_save_succee(), "保存失败，请检查代码"
 
-    # 测试 删除 地址
+    # 测试 全部删除完地址之后 点击编辑按钮 是否还会出现 删除按钮
     def test_delete_address(self):
         # 判断是否登录，没有登录则登录
         self.page.page_login.page_login_if_not_login(self.page)

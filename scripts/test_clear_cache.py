@@ -12,6 +12,7 @@ class TestClearCache:
         self.page = Page(self.driver)
 
     def teardown(self):
+        time.sleep(2)
         GetDriver.quit_driver()
 
     def test_clear_cache(self):
